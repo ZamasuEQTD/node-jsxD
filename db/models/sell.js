@@ -4,9 +4,11 @@ const { itemSchema } = require("./item")
 const Schema = mongoose.Schema
 
 const sellSchema = new Schema({
+    hora:String,
     date:String,
     total: Number,
-    cartItems:[itemSchema]
+    sellId:String,
+    cartItems:String
 })
 
 const Sell = mongoose.model("Sell",sellSchema)
